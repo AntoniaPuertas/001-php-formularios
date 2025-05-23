@@ -4,3 +4,16 @@ a{
 .container{
     background-color: rgb(178, 197, 242);
 }
+
+.ojo{
+    display: flex;
+}
+.ojo button {
+  background-color: white;
+  margin-left: -1rem;
+  border-radius: 0.375rem;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}
+.ojo button:hover{
+    background-color: rgb(188, 184, 184);
+}

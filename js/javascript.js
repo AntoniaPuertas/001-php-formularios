@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
     const mensajeError = document.getElementById("mensajeError");
     const mensajeEnviado = document.getElementById("mensajeEnviado");
+    const mostrarP = document.getElementById("mostrarPassword");
+    const imgOjo = document.getElementById("imgOjo");
 
     //crear un evento para el submit del formulario
     form.addEventListener('submit', function(event) {
@@ -67,6 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
             mensajeError.classList.remove('d-none');
         }else{
             mensajeError.classList.add('d-none');
+        }
+    })
+
+    mostrarP.addEventListener('click', () => {
+        if(document.getElementById("inputPassword").type === "password"){
+            document.getElementById("inputPassword").type = "text"
+            imgOjo.src = "img/ojo-cerrado.svg"
+        }else{
+            document.getElementById("inputPassword").type = "password"
+            imgOjo.src = "img/ojo.svg"
         }
     })
 
